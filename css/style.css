@@ -1,0 +1,551 @@
+@charset "utf-8";
+
+/* ここから下に記載していく */
+
+/*============================================
+全般的なスタイル
+============================================*/
+body {
+	background-color: #ffffff;	/*ページ全体の背景色*/
+    text-align: center;		/*IE6以下でセンタリングするための対策*/
+    align-items: center;
+    margin: 0px auto;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+* {
+	line-height:2;	/*全要素の行の高さを1.5倍にする*/
+    color:#333333;		/*文字色*/
+    font-size:16px;
+} 
+
+.wrapper{
+    max-width: 1140px;
+    align-items: center;
+    margin: auto;
+}
+
+.normal-sec{
+    background-color: #ffffff;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 60px 0px 60px 0px;
+    align-items: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*============================================
+見出し・テキストのスタイル
+============================================*/
+.site-title{
+    font-size:24px;
+    font-weight:bold;
+    color:#2d3436;
+    margin-bottom: 30px;
+}
+
+.site-subtitle_01{
+    font-size:18px;
+    color:#636e72;
+    margin: 0px 0px 60px 0px;
+}
+
+.profile_text{
+    margin:0px 0px 40px 0px;
+}
+
+/* 末尾の段落。余白を多めに取りたい時に。*/
+.profile_text_fin{
+    margin:0px 0px 80px 0px;
+}
+
+/*============================================
+ヘッダ
+============================================*/
+.header{
+    background-color:#ffffff;
+}
+
+.header-wrapper{
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+.navi{
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.navi-list{
+    display: flex;
+    font-size: 21px;
+    width: 100%;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.navi-item{
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.navi-item a{
+    text-decoration: none;
+}
+
+.title-img{
+    position: relative;
+    align-items: flex-start;
+    max-width: 100vw;
+}
+
+.title-text {
+    position: absolute;
+    width: 100vw;
+    top: 50%;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 50px;
+    color: #ffffff;
+  }
+
+.subtitle-text{
+    position: absolute;
+    width: 100vw;
+    bottom: 50%; 
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+/*============================================
+Aboutセクションの画像のスタイル
+============================================*/
+
+/* アニメ用の設定　*/
+
+.infinity-slide{
+    display: flex; /* 二つのスライドを横に並べる */
+    width: 100%;
+    background: gray;
+    overflow: hidden;
+  }
+  
+  #slide {
+    animation: infinity-loop 30s infinite linear 1s both; /* 無限ループアニメーションの設定 */
+    display: flex; /* スライドの要素を横に並べる */
+    width: auto;
+    position: relative;
+  }
+  
+  #slide img{
+    width: auto；
+  }
+  
+  /* 無限ループアニメーション */
+  @keyframes infinity-loop {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+
+/*============================================
+COURSEセクションの画像のスタイル
+============================================*/
+.course_list{
+    width: 100%;
+    display: flex;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: #dfe6e9;
+}
+
+.course_element{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course_img{
+    width: 100%;
+    display: block;
+}
+
+.course_content_textbox_left{
+    width: 480px;
+    text-align: left; 
+    margin-left: auto;
+    margin-right: 60px;
+}
+
+.course_content_textbox_right{
+    width: 480px;
+    text-align: left;
+    margin-left: 60px;
+    margin-right: auto;
+}
+
+.course_content_title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+
+/*============================================
+NEWSセクションの画像のスタイル
+============================================*/
+.news_list{
+    display: flex;
+    margin: 20px 0px 0px 0px;
+}
+
+.news_item_left{
+    width: 33.333%;
+    margin: 0px 30px 0px 0px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.news_item_left img{
+    width: 100%;
+    transition-duration: 0.5s;
+    }
+    
+.news_item_left:hover img{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.news_item_center{
+    width: 33.333%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.news_item_center img{
+    width: 100%;
+    transition-duration: 0.5s;
+    }
+    
+.news_item_center:hover img{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.news_item_right{
+    width: 33.333%;
+    margin: 0px 0px 0px 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.news_item_right img{
+    width: 100%;
+    transition-duration: 0.5s;
+    }
+    
+.news_item_right:hover img{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+
+.news_eyecatch{
+    margin: 0px 0px 30px 0px;
+    text-align: left;	
+}
+
+.news_text_date{
+    margin: 0 0 24px 0;
+    text-align: left;	
+}
+
+.news_text{
+    line-height: 1.5;
+    text-align: left;	
+}
+
+.news_text_eyecatch{
+    margin:30px 0px 60px 0px;
+}
+
+/*============================================
+ACCESSのスタイル
+============================================*/
+
+.access-sec{
+    background-color: #eaeaea;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 60px 0px 60px 0px;
+    align-items: center;
+}
+
+.access-wrapper{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.access_info-wrapper{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.access-inner{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+}
+
+.access-title{
+    width: 150px;
+    text-align: left;
+}
+
+.access-item{
+    width: 380px;
+    text-align: left;
+}
+
+.map-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.map-container iframe{
+    width:100%;
+    height: 300px;
+}
+
+/*============================================
+フォームのスタイル
+============================================*/
+.form-wrapper{
+    width: 700px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-color: #eaeaea;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-bottom-color: #eaeaea;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+} 
+
+.form-inner{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-title{
+    text-align: left;
+    width: 145px;
+    padding: 8px 64px 8px 16px;
+    border-bottom-color: #eaeaea;
+    border-right-color: #eaeaea;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: 1px;
+}
+
+.form-item{
+ /*   align-items: right; */
+ /*   text-align: left; */
+    width: 420px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    border-bottom-color: #eaeaea;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.form-item input[type="text"], input[type="email"], textarea{
+    width: 400px;
+    border-color: #eaeaea;
+    border-style: solid;
+    border-width: 2px;
+}
+
+
+.form-checkbox-list{
+    align-items: left;
+    text-align: left;
+    margin-left: 8px;
+}
+
+.form-checkbox-list input{
+    margin-right: 10px;
+}
+
+.select_list{
+    width: 350px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    border-bottom-color: #eaeaea;
+    border-bottom-style: solid;
+}
+
+.cp_ipselect {
+    overflow: hidden;
+    width: 100%;
+    /* margin: 8px 0px 8px 8px; */
+    text-align: center;
+    }
+    .cp_ipselect select {
+    width: 100%;
+    padding-left: 8px;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+    }
+    .cp_ipselect select::-ms-expand {
+    display: none;
+    }
+    .cp_ipselect.cp_sl04 {
+    position: relative;
+    border-radius: 1px;
+    border: 2px solid #eaeaea;
+    border-radius: 1px;
+    background: #ffffff;
+    }
+    .cp_ipselect.cp_sl04::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.8em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #999999;
+    pointer-events: none;
+    }
+    .cp_ipselect.cp_sl04 select {
+    padding: 8px 8px 8px 8px;
+    color: #999999;
+    }
+
+/*============================================
+ボタンのスタイル
+============================================*/
+
+.to-top{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    right: 0;
+    bottom: 0;
+    margin-right: 20px;
+    margin-bottom:  100px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    background: #636e72;
+    cursor: pointer;
+  }
+
+/* ニュースのMOREボタン */
+.button_news_more {
+    font-size: 18px;
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+    padding: 15px 120px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #f1c40f;
+    color: #333333;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* マウスオーバー時 */
+.button_news_more:hover {
+    color: #ffffff;
+    background-color: #95a5a6;
+    cursor: pointer;
+}
+
+.button_news_more_margine{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+/* 問合せフォームの送信ボタン */
+input[type="submit"]{
+    font-size: 18px;
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #f1c40f;
+    color: #333333;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-style: none;
+}
+
+/* マウスオーバー時 */
+input[type="submit"]:hover {
+    color: #ffffff;
+    background-color: #95a5a6;
+    cursor: pointer;
+}
+
+.button_form_submit_margin {
+    margin-top: 20px;
+    margin-bottom: 140px;
+}
+
+
+/*============================================
+フッターのスタイル
+============================================*/
+
+footer{
+    width: 100%;
+    background: #707070;
+    text-align: center;
+    padding: 30px 0;
+    bottom: 0; /*下に固定*/
+}
+
+footer small{
+    color: #fdfdfd;
+}
